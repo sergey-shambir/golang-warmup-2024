@@ -15,6 +15,10 @@ type FlatMap[K orderedKey, V any] struct {
 	items []keyValue[K, V]
 }
 
+func (m FlatMap[K, V]) Items() []keyValue[K, V] {
+	return m.items
+}
+
 func (m *FlatMap[K, V]) Size() int {
 	return len(m.items)
 }
